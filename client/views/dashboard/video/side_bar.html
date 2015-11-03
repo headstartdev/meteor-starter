@@ -1,0 +1,100 @@
+<template name="side_bar">
+    {{> navbar}}
+    <div class="layout side-bar-layout">
+
+        <div class="wrapper">
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/avatar5.png" class="img-circle" alt="User Image"/>
+                        </div>
+                        <div class="pull-left info">
+                            <p>회원1</p>
+
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                              <span class="input-group-btn">
+                                <button type='submit' name='search' id='search-btn' class="btn btn-flat">
+                                    <i class="fa fa-search"></i></button>
+                              </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li class="header">IT</li>
+                        <li class="active treeview">
+                            <a href="{{pathFor 'videoc'}}">
+                                <i class="fa fa-dashboard"></i> <span>C</span> <i
+                                    class="fa fa-angle-left pull-right"></i>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="{{pathFor 'videoc++'}}">
+                                <i class="fa fa-files-o"></i>
+                                <span>C++</span>
+                                <span class="label label-primary pull-right">4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-th"></i> <span>C#</span>
+                                <small class="label pull-right bg-green">new</small>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-pie-chart"></i><span>JAVA</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>Algorithm</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-edit"></i> <span>Data Structure</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-table"></i> <span>HTML</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i> <span>JavaScript</span>
+                                <small class="label pull-right bg-red">3</small>
+                            </a>
+                        </li>
+                        <li class="header">영어</li>
+                        <li><a href="#"><i class="fa fa-circle-o text-danger"></i> 영어1</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o text-warning"></i> 영어2</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o text-info"></i> 영어3</a></li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+            {{>yield}}
+        </div>
+        <!-- ./wrapper -->
+
+    </div>
+    {{#if isRouteReady}}
+        {{> footer}}
+    {{/if}}
+</template>

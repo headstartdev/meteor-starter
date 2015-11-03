@@ -1,76 +1,76 @@
 {
 
-	/*Config*/
-	"configName": "My App",
-	"configTitle": "Make Meteor Apps. Fast.",
-	"configSubtitle": "Create beautiful and functioning Meteor apps really quick",
-	
-	/*Home*/
-	"getstarted": "Get Started",
-	"dashboard": "Go to dashboard",
-	"learn": "Learn more",
-	"intro": "Make Meteor Apps. Fast.",
-	"how": "How It Works",
-	"step_1": "Step 1",
-	"step_1_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-	"step_2": "Step 2",
-	"step_2_text": "Oratio me istius philosophi non offendit; Qua tu etiam inprudens utebare non numquam.",
-	"step_3": "Step 3",
-	"step_3_text": "Et ille ridens: Video, inquit, quid agas; Duo Reges: constructio interrete.",
-	"section_ipad_header": "A revolutionary product",
-	"section_ipad_text": "Do really cool stuff really quickly",
-	"section_ipad_btn": "Made by MeteorFactory",
-	"final_text": "Your life will be instantly better.",
-	"final_cta": "Take a look",
+  /*Config*/
+  "configName": "HeadStartSV",
+  "configTitle": "Be professional",
+  "configSubtitle": "",
 
-	/*Shared*/
+  /*Home*/
+  "getstarted": "Get Started",
+  "dashboard": "Go to dashboard",
+  "learn": "Learn more",
+  "intro": "Make Meteor Apps. Fast.",
+  "how": "어떻게 가능하냐면...",
+  "step_1": "실무 선행 실습",
+  "step_1_text": "실제 회사의 프로젝트를 통해 업무에 직접 참여할 수 있습니다",
+  "step_2": "전문가의 노하우",
+  "step_2_text": "영상을 통해 그들의 경험을 공유할 수 있습니다",
+  "step_3": "Personal Management Chart",
+  "step_3_text": "성장하는 자신의 모습을 차트로 확인 할 수 있습니다",
+  "section_ipad_header": "A revolutionary product",
+  "section_ipad_text": "Do really cool stuff really quickly",
+  "section_ipad_btn": "Made by MeteorFactory",
+  "final_text": "플로우 차트입니다.",
+  "final_cta": "Take a look",
 
-	"favorite": "Favorite",
+  /*Shared*/
 
-	 /*Navbar*/
-	"admin": "Admin",
-	"profile": "Profile",
-	"account": "Account",
-	"signout": "Sign out",
-	"signup": "Sign up",
-	"login": "Log in",
-	"login2": "Login",
-	"edit_profile": "Edit Profile",
+  "favorite": "Favorite",
 
-	/*Not Found*/
-	"not_found": "Nothing here.",
+  /*Navbar*/
+  "admin": "Admin",
+  "profile": "프로필",
+  "account": "Account",
+  "signout": "로그아웃",
+  "signup": "회원가입",
+  "login": "로그인",
+  "login2": "로그인",
+  "edit_profile": "프로필 수정",
 
-
-	/*Dashboard*/
-	"add_post": "Add a Post",
-	"add_post_btn": "Add Post",
-	"add_post_modal": "Add with a modal",
-	"add_post_modal_btn": "Add a new post",
-	"edit_post": "Edit post",
-	"delete": "Delete",
-	"favorites": "Favorites",
-
-	/*Account*/
-	"account_details": "Account Details",
-	"delete_account": "Delete Account",
-	"delete_account_warn": "There's no coming back from this one",
-	"delete_account_warn2": "Are you sure you want to delete your account?",
-	"close": "Close",
-	"change_pswd": "Change Password",
-
-	/*Profile*/
-	"update": "Update",
-
-	/*Posts*/
-
-	"postTitle": "Title",
-	"postContent": "Content",
-	"postPicture": "Picture",
-	// "uploadLabel": "Choose File"
-	"profilePicture": "Profile Picture"
+  /*Not Found*/
+  "not_found": "Nothing here.",
 
 
-	
+  /*Dashboard*/
+  "add_post": "Add a Post",
+  "add_post_btn": "Add Post",
+  "add_post_modal": "Add with a modal",
+  "add_post_modal_btn": "Add a new post",
+  "edit_post": "Edit post",
+  "delete": "Delete",
+  "favorites": "Favorites",
+
+  /*Account*/
+  "account_details": "Account Details",
+  "delete_account": "Delete Account",
+  "delete_account_warn": "There's no coming back from this one",
+  "delete_account_warn2": "Are you sure you want to delete your account?",
+  "close": "Close",
+  "change_pswd": "Change Password",
+
+  /*Profile*/
+  "update": "Update",
+
+  /*Posts*/
+
+  "postTitle": "Title",
+  "postContent": "Content",
+  "postPicture": "Picture",
+  // "uploadLabel": "Choose File"
+  "profilePicture": "Profile Picture"
+
+
+
 
 
 }

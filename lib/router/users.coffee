@@ -5,6 +5,24 @@ Router.map ->
   @route "account",
     path: "/account"
 
+  @route "customer",
+    path: "/customer"
+
+  @route "register",
+    path: "/register"
+
+  @route "video_lecture",
+    path: "/video_lecture"
+    layoutTemplate: "side_bar"
+
+  @route "videoc++",
+    path: "/videoc++"
+    layoutTemplate: "side_bar"
+
+  @route "videoc",
+    path: "/videoc"
+    layoutTemplate: "side_bar"
+
   @route "setUserName",
     path: "/setUserName"
     onBeforeAction: ->

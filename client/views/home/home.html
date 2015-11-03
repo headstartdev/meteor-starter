@@ -1,85 +1,96 @@
 <template name="home">
-<div id="skrollr-body">
-    {{> skrollrBackground}}
-    <section id="intro" class="colored text-center">
-        <header>
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="container">
-                    <div class="row">
-                        <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
-                        <div id="main-nav" class="navbar-collapse">
-                            <ul class="social-links">
-                                {{#unless User}}
-                                <a id="home-login" href="{{pathFor route='atSignIn'}}"><li>{{_ "login2"}}</li></a>
-                                {{/unless}}
-                                {{#each socialMedia}}
-                                <a href="{{url}}" target="_blank"><li class="fa fa-{{icon}}"></li></a>
-                                {{/each}}
-                            </ul>
+    <div id="skrollr-body">
+        {{> skrollrBackground}}
+        <section id="intro" class="colored text-center">
+            <header>
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="row">
+                            <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
+
+                            <div id="main-nav" class="navbar-collapse">
+                                <ul class="social-links">
+                                    {{#unless User}}
+                                        <a id="home-login" href="{{pathFor route='atSignIn'}}">
+                                            <li>{{_ "login2"}}</li>
+                                        </a>
+                                    {{/unless}}
+
+                                    <a href="https://www.facebook.com/headstartsv" target="_blank">
+                                        <li class="fa fa-facebook"></li>
+                                    </a>
+                                  <!--  <a href="{{url}}" target="_blank">
+                                        <li class="fa fa-twitter"></li>
+                                    </a>
+                                    <a href="{{url}}" target="_blank">
+                                        <li class="fa fa-github"></li>
+                                    </a>-->
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
-        </header>
-        <div class="container">
-            <div class="intro-well wow animated bounceIn">
-                <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <h1>{{Config.title}}</h1>
-                        <h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
-                        {{#if User}}
-                        <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
-                        {{else}}
-                        <a class="btn btn-success" href="{{pathFor 'dashboard'}}">{{_ "getstarted"}}</a>
-                        {{/if}}
+                </nav>
+            </header>
+            <div class="container">
+                <div class="intro-well wow animated bounceIn">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <h1 style="color:white;font-size: 500%">{{Config.title}}</h1>
+
+                            <h2 class="hidden-xs">{{Config.subtitle}}</h2>
+                            {{#if User}}
+                                <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i
+                                        class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
+                            {{else}}
+                                <a class="btn btn-success" href="{{pathFor 'dashboard'}}">{{_ "getstarted"}}</a>
+                            {{/if}}
+                        </div>
+                        <!--                 <div class="col-lg-6 col-sm-6">
+                                                    <img class="img-responsive" src="/img/image-header1.png" alt="">
+                        </div> -->
                     </div>
-                    <!--                 <div class="col-lg-6 col-sm-6">
-                                                <img class="img-responsive" src="/img/image-header1.png" alt="">
-                    </div> -->
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="how-it-works" class="text-center">
-        <div class="container wow fadeIn animated">
-            <div class="row col-md-12">
-                <h3>{{_ "how"}}</h3>
-                <h4>{{Config.name}} - {{Config.subtitle}}</h4>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row" id="icon-row">
-                <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.4s">
-                    <div class="iconbox">
-                        <i class="fa fa-plane fa-3x"></i>
-                    </div>
-                    <p class="icntitle">1. {{_ "step_1"}}</p>
-                    <p class="icnp">{{_ "step_1_text"}}</p>
-                </div>
-                <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.8s">
-                    <div class="iconbox">
-                        <i class="fa fa-bolt fa-3x"></i>
-                    </div>
-                    <p class="icntitle">2. {{_ "step_2"}}</p>
-                    <p class="icnp">{{_ "step_2_text"}}</p>
-                </div>
-                <div class="col-md-4 wow fadeInRight animated" data-wow-delay="1.2s">
-                    <div class="iconbox">
-                        <i class="fa fa-check fa-3x"></i>
-                    </div>
-                    <p class="icntitle">3. {{_ "step_3"}}</p>
-                    <p class="icnp">{{_ "step_3_text"}}</p>
+        </section>
+        <section id="how-it-works" class="colored text-center">
+            <div class="container wow fadeIn animated">
+                <div class="row col-md-12">
+                    <h3>{{_ "how"}}</h3>
+                    <h4></h4>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- <section id="examples">
-                <div class="container wow fadeInUp animated">
-                        <h1>Great features!</h1>
-                        <h2>You can use {{Config.siteName}} to do anything</h2>
+            <div class="container">
+                <div class="row" id="icon-row">
+                    <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.4s">
+                        <div class="iconbox">
+                            <i class="fa fa-plane fa-5x"></i>
+                        </div>
+                        <p class="icntitle">1. {{_ "step_1"}}</p>
+
+                        <p class="icnp">{{_ "step_1_text"}}</p>
+                    </div>
+                    <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.8s">
+                        <div class="iconbox">
+                            <i class="fa fa-lightbulb-o fa-5x"></i>
+                        </div>
+                        <p class="icntitle">2. {{_ "step_2"}}</p>
+
+                        <p class="icnp">{{_ "step_2_text"}}</p>
+                    </div>
+                    <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="1.2s">
+                        <div class="iconbox">
+                            <i class="fa fa-line-chart fa-5x"></i>
+                        </div>
+                        <p class="icntitle">3. {{_ "step_3"}}</p>
+
+                        <p class="icnp">{{_ "step_3_text"}}</p>
+                    </div>
                 </div>
-    </section> -->
-    <section id="ipad" class="colored text-center">
+            </div>
+        </section>
+
+
+        <!-- <section id="ipad" class="colored text-center">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -96,42 +107,137 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="final">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center wow fadeInDown animated" data-wow-delay="0.8s">
-                    <h3>
-                    {{_ "final_text"}}
-                    </h3>
-                    <div class="text-center">
-                        <a class="btn btn-primary" href="{{pathFor 'dashboard'}}">{{_ "final_cta"}}</a>
+    </section>-->
+
+        <!--&&&&&&&&&&-->
+        <section id="how-it-works" class="text-center">
+            <div class="container wow fadeIn animated">
+                <div class="row" id="icon-row">
+                    <div class="col-md-12 wow fadeInUp animated" data-wow-delay="0.4s">
+                        <div class="imagebox">
+                            <img src="img/Flow.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-8  wow fadeInUp animated">
-                    <img src="img/screenshot.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                    <!--<div class="col-md-1 wow fadeInLeft animated" data-wow-delay="0.8s">
+                        <div class="imagebox">
+                            <img src="img/2.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                        </div>
+                    </div>
+                    <div class="col-md-1 wow fadeInLeft animated" data-wow-delay="1.2s">
+                        <div class="imagebox">
+                            <img src="img/3.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                        </div>
+                    </div>
+                    <div class="col-md-1 wow fadeInLeft animated" data-wow-delay="1.6s">
+                        <div class="imagebox">
+                            <img src="img/4.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                        </div>
+                    </div>
+                    <div class="col-md-1 wow fadeInLeft animated" data-wow-delay="2.2s">
+                        <div class="imagebox">
+                            <img src="img/5.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                        </div>
+                    </div>
+                    <div class="col-md-1 wow fadeInLeft animated" data-wow-delay="2.6s">
+                        <div class="imagebox">
+                            <img src="img/6.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                        </div>
+                    </div>
+                    <div class="col-md-1 wow fadeInLeft animated" data-wow-delay="3.0s">
+                        <div class="imagebox">
+                            <img src="img/7.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                        </div>
+                    </div>-->
                 </div>
             </div>
-        </div>
-    </section>
-</div>
-{{> footerHome}}
+        </section>
+
+
+        <!--<section id="final">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center wow fadeInDown animated" data-wow-delay="0.8s">
+                        <h3>
+                            {{_ "final_text"}}
+                        </h3>
+                        &lt;!&ndash;<div class="text-center">
+                        <a class="btn btn-primary" href="{{pathFor 'dashboard'}}">{{_ "final_cta"}}</a>
+                    </div>&ndash;&gt;
+                    </div>
+                    <div class="col-md-8  wow fadeInUp animated">
+                        <img src="img/flow.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <section id="faq" class="colored text-center">
+            <div class="container padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <h2>Q. 실무 선행 실습을 전공과 &nbsp;&nbsp;&nbsp; 무관하게 참여할 수 있나요?</h2>
+
+                        <p>저희 HeadStart SV 에서 제공하는 프로그램은 전공과는 <br> 상관없이 실제 회사에서 필요로 하는 공통적 업무능력에 대한 <br> 교육을 제공하기 때문에
+                            전공과는 상관없이 참여하실수 <br> 있습니다.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Q. 프로그램에 참여하려면 <br> &nbsp;어떻게 해야 하나요?</h2>
+
+                        <p>우선 여러분이 공통적으로 참여하셔야 하는 컨텐츠는 실무 선행 실습 프로젝트입니다. 이는 해외 취업을 목표로 하는 고객님들이 실제 미국 기업에서 진행하고 있는 프로젝트에 참여하는 프로그램입니다. 그 외의 컨텐츠로는 영어교육과 IT직무교육이 있습니다. 이 두 가지는 본인이 현재 무엇이 필요한지를 생각하고 선택하시길 바랍니다. 선택하는 과정에서 상담이 필요하시면 저희 카카오톡이나 메일로 상담해 주시길 바랍니다.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Q. HeadStart는 <br> &nbsp;&nbsp;무엇인가요?</h2>
+
+                        <p>HeadStart는 인턴 및 취업 준비자들을 대상으로
+                            사전에 업무를 수행하는데 필요한 지식과 노하우를 실제 업무에 가장 가까운 시뮬레이션 훈련을 통해
+                            미리 습득하도록 도와드립니다. 인턴을 통해 경험과 지식/노하우를 습득하는 것이 아니라,
+                            사전 시뮬레이션을 통해, 인턴/취업 시 지식과 노하우를 이용해서 업무를 훌륭히 수행하게 하는 것이 목표입니다.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Q. 프로그램에 참여하면<br> &nbsp;&nbsp;&nbsp;&nbsp;어떤 이점이 있나요?</h2>
+
+                        <p>저희 프로그램에 참여 하시게 되면 실제 회사에서 진행되는 프로젝트에 참여하여 업무를 수행하실 예정이며 이를 통해 회사가 어떻게 돌아가는지, 업무수행은 어떤식으로 해
+                            나가야 하는지에 대한 해답을 얻으실수 있을 것입니다.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Q. 프로그램에 참여하는 데 <br>비용이 드나요?</h2>
+
+                        <p>본 프로그램은 유료로 진행됩니다. 최적화된 커리큘럼을 유지하기 위해 저희가 제공해드리는 것은 전문가와의 직접 만남 그리고 실제 업무를 접할 수 있는 기회입니다. 또한, 현재 실무능력을 현직에 계신 전문가에게 직접 평가 지도를 받을 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="examples" class="text-center">
+            <div class="container wow fadeInUp animated">
+                <h1>당신의 취업을 지원합니다</h1>
+            </div>
+        </section>
+    </div>
+    {{> footerHome}}
 </template>
 <template name="skrollrBackground">
-<div
-    id="skroll-background-intro"
-    class="parallax-image-wrapper parallax-image-wrapper-100"
-    data-anchor-target="#intro"
-    data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-    data-top-bottom="transform:translate3d(0px, 0%, 0px)">
     <div
-        class="parallax-image parallax-image-100"
-        data-anchor-target="#intro"
-        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
-    ></div>
-    <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
-</div>
+            id="skroll-background-intro"
+            class="parallax-image-wrapper parallax-image-wrapper-100"
+            data-anchor-target="#intro"
+            data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+            data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+            back>
+        <div
+                class="parallax-image parallax-image-100"
+                data-anchor-target="#intro"
+                data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+                data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+                ></div>
+        <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+    </div>
 </template>
 <template name="footerHome">
     <footer id="footer-home">
@@ -139,20 +245,32 @@
             <div class="row text-center">
                 <div class="col-md-offset-2 col-md-8">
                     <ul class="social-networks">
-                        {{#each socialMedia}}
+                        <li><a href="https://www.facebook.com/headstartsv" target="_blank">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span></a>
+                        </li>
+                        <!--<li><a href="{{url}}" target="_blank">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span></a>
+                        </li>
                         <li><a href="{{url}}" target="_blank">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-{{icon}} fa-stack-1x fa-inverse"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                         </span></a>
-                        </li>
-                        {{/each}}
+                        </li>-->
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
                     {{{Config.footer}}}
+                    <br>문의 : 010-6884-6074<br>
+                    Kakao ID : ryankoo
                 </div>
             </div>
         </div>

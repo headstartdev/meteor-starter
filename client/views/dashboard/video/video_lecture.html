@@ -1,0 +1,110 @@
+<template name="video_lecture">
+
+    <!-- AdminLTE App -->
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                강의보기
+                <small>C</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">강의보기</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <!-- Main row -->
+            <div class="row">
+                <!-- Left col -->
+                <section class="col-lg-7 connectedSortable">
+                    <!-- Custom tabs (Charts with tabs)-->
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <i class="ion ion-clipboard"></i>
+                            <h3 class="box-title">강의소개</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body" align="center">
+                            <iframe width="500" height="300" src="https://www.youtube.com/embed/Rub-JsjMhWY" frameborder="0" allowfullscreen></iframe>
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+
+                    <div class="box box-primary direct-chat direct-chat-primary" style = "width : 1010px;">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">질문</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <!-- Conversations are loaded here -->
+                            <div class="direct-chat-messages">
+                                <!-- Message. Default to the left -->
+                                <div class="direct-chat-msg">
+                                    <div class='direct-chat-info clearfix'>
+                                        <span class='direct-chat-name pull-left'>회원1</span>
+                                        <span class='direct-chat-timestamp pull-right'>23 Jan 2:00 pm</span>
+                                    </div><!-- /.direct-chat-info -->
+                                    <img class="direct-chat-img" src="img/user1-128x128.jpg" alt="message user image" /><!-- /.direct-chat-img -->
+                                    <div class="direct-chat-text">
+                                        질문
+                                    </div><!-- /.direct-chat-text -->
+                                </div><!-- /.direct-chat-msg -->
+
+                                <!-- Message to the right -->
+                                <div class="direct-chat-msg right">
+                                    <div class='direct-chat-info clearfix'>
+                                        <span class='direct-chat-name pull-right'>강사1</span>
+                                        <span class='direct-chat-timestamp pull-left'>23 Jan 2:05 pm</span>
+                                    </div><!-- /.direct-chat-info -->
+                                    <img class="direct-chat-img" src="img/user3-128x128.jpg" alt="message user image" /><!-- /.direct-chat-img -->
+                                    <div class="direct-chat-text">
+                                       대답
+                                    </div><!-- /.direct-chat-text -->
+                                </div><!-- /.direct-chat-msg -->
+                            </div><!--/.direct-chat-messages-->
+
+                            <!-- Contacts are loaded here -->
+                        </div><!-- /.box-body -->
+                        <div class="box-footer">
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="message" placeholder="Type Message ..." class="form-control"/>
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary btn-flat">Send</button>
+                          </span>
+                                </div>
+                            </form>
+                        </div><!-- /.box-footer-->
+                    </div><!--/.direct-chat -->
+            </section>
+                <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                <section class="col-lg-5 connectedSortable">
+                    <!-- Map box -->
+                    <div class="box box-info">
+                        <div class="box-header">
+                            <!-- tools box -->
+                            <h3 class="box-title">
+                                강사 소개
+                            </h3>
+                        </div>
+                        <div class="box-body">
+                            <div id="world-map" style="height: 250px; width: 100%;">
+                                <div class="box-body" align="left">
+                                    <img src="img/user8-128x128.jpg" class="img-thumbnail" alt="User Image" />
+                                </div>
+                                <div>
+                                    <p>소개</p>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body-->
+                    </div>
+                    <!-- /.box -->
+
+                </section><!-- right col -->
+            </div><!-- /.row (main row) -->
+
+        </section><!-- /.content -->
+        {{>video_footer}}
+    </div><!-- /.content-wrapper -->
+</template>

@@ -6,18 +6,25 @@
 					<button type="button" class="navbar-toggle">
 						<i class="fa fa-bars"></i>
 					</button>
+
 					<a href="{{pathFor 'profile'}}" class="xs-mobile-cta">
 						<i class="fa fa-user"></i>
 					</a>
+
 					<a class="navbar-brand" href="{{#if User}}{{Config.dashboardRoute}}{{else}}{{Config.homeRoute}}{{/if}}">{{{Config.logo}}}</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 					{{#if User}}
-						{{> notificationsDropdown}}
+                        <li><a href="{{pathFor 'register'}}">수강신청</a></li>
+                        <li><a href="{{pathFor 'videoc'}}">수강하기</a></li>
+                        <li><a href="{{pathFor 'customer'}}">고객센터</a></li>
+                        {{> notificationsDropdown}}
 						{{#if isInRole 'admin'}}
 						<li><a href="{{pathFor 'adminDashboard'}}">{{_ "admin"}}</a></li> 
 						{{/if}}
+
+
 						<li class="dropdown hidden-xs">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{niceName User._id}} <i class="fa fa-chevron-down i-xs"></i></a>
 							<ul class="dropdown-menu">
