@@ -1,4 +1,4 @@
-Meteor Starter
+우리 꺼Meteor Starter
 ==============
 
 A Meteor boilerplate with a lot packed in. Written in Coffeescript.
